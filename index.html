@@ -5,65 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Agenții Imobiliare Sibiu</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
       font-family: Arial, sans-serif;
-      overflow: hidden;
-      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f7f7;
     }
 
     h1 {
       text-align: center;
-      margin-top: 10px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .agency {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .agency:hover {
+      transform: scale(1.05);
+    }
+
+    .agency img {
+      width: 100%;
+      max-height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .agency-name {
+      font-size: 14px;
       color: #333;
-    }
-
-    .container {
-      position: relative;
-      width: 100vw;
-      height: 90vh;
-      overflow: hidden;
-    }
-
-    .logo {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      animation: float 12s infinite alternate ease-in-out;
-      border-radius: 50%;
-    }
-
-    @keyframes float {
-      0%   { transform: translate(0, 0); }
-      25%  { transform: translate(20px, 10px); }
-      50%  { transform: translate(-10px, 30px); }
-      75%  { transform: translate(10px, -20px); }
-      100% { transform: translate(0, 0); }
     }
   </style>
 </head>
 <body>
   <h1>Descoperă cele mai bune agenții imobiliare din Sibiu</h1>
-  <div class="container">
-    <a href="https://www.newconceptliving.ro/" target="_blank" class="logo" style="top:40px; left:30px; background-image:url('https://www.newconceptliving.ro/assets/img/logo-ncl.png');"></a>
-    <a href="https://eurosibimobiliare.ro/" target="_blank" class="logo" style="top:120px; left:110px; background-image:url('https://eurosibimobiliare.ro/images/logo.png');"></a>
-    <a href="https://www.remax.ro/agentii/agentii-imobiliare-sibiu" target="_blank" class="logo" style="top:200px; left:200px; background-image:url('https://www.remax.ro/img/remax-logo.svg');"></a>
-    <a href="https://www.kwsibiu.ro/" target="_blank" class="logo" style="top:60px; left:220px; background-image:url('https://www.kwsibiu.ro/images/kw-sibiu-logo.svg');"></a>
-    <a href="https://welhome.ro/" target="_blank" class="logo" style="top:180px; left:30px; background-image:url('https://welhome.ro/wp-content/uploads/2021/04/welhome_logo.svg');"></a>
-    <a href="https://www.towerimob.ro/" target="_blank" class="logo" style="top:300px; left:120px; background-image:url('https://www.towerimob.ro/images/logo.png');"></a>
-    <a href="https://maiaimobiliare.ro/" target="_blank" class="logo" style="top:220px; left:320px; background-image:url('https://maiaimobiliare.ro/wp-content/uploads/2021/09/logo-maia.png');"></a>
-    <a href="https://www.intermedcasasibiu.ro/" target="_blank" class="logo" style="top:100px; left:300px; background-image:url('https://www.intermedcasasibiu.ro/images/logo.png');"></a>
-    <a href="https://www.grntopinvest.ro/" target="_blank" class="logo" style="top:280px; left:200px; background-image:url('https://www.grntopinvest.ro/public/img/logo.png');"></a>
-    <a href="https://www.maac.ro/" target="_blank" class="logo" style="top:340px; left:20px; background-image:url('https://www.maac.ro/logo-maac.png');"></a>
+  <div class="grid">
+    <a href="https://www.newconceptliving.ro/" class="agency" target="_blank">
+      <img src="https://www.newconceptliving.ro/assets/img/logo-ncl.png" alt="New Concept Living">
+      <div class="agency-name">New Concept Living</div>
+    </a>
+    <a href="https://eurosibimobiliare.ro/" class="agency" target="_blank">
+      <img src="https://eurosibimobiliare.ro/images/logo.png" alt="Eurosib">
+      <div class="agency-name">Eurosib Imobiliare</div>
+    </a>
+    <a href="https://www.remax.ro/agentii/agentii-imobiliare-sibiu" class="agency" target="_blank">
+      <img src="https://www.remax.ro/img/remax-logo.svg" alt="RE/MAX">
+      <div class="agency-name">RE/MAX Sibiu</div>
+    </a>
+    <a href="https://www.kwsibiu.ro/" class="agency" target="_blank">
+      <img src="https://www.kwsibiu.ro/images/kw-sibiu-logo.svg" alt="Keller Williams">
+      <div class="agency-name">Keller Williams</div>
+    </a>
+    <a href="https://welhome.ro/" class="agency" target="_blank">
+      <img src="https://welhome.ro/wp-content/uploads/2021/04/welhome_logo.svg" alt="Welhome">
+      <div class="agency-name">Welhome</div>
+    </a>
+    <a href="https://www.towerimob.ro/" class="agency" target="_blank">
+      <img src="https://www.towerimob.ro/images/logo.png" alt="Tower Imob">
+      <div class="agency-name">Tower Imob</div>
+    </a>
+    <a href="https://maiaimobiliare.ro/" class="agency" target="_blank">
+      <img src="https://maiaimobiliare.ro/wp-content/uploads/2021/09/logo-maia.png" alt="Maia Imobiliare">
+      <div class="agency-name">Maia Imobiliare</div>
+    </a>
+    <a href="https://www.intermedcasasibiu.ro/" class="agency" target="_blank">
+      <img src="https://www.intermedcasasibiu.ro/images/logo.png" alt="Intermed Casa">
+      <div class="agency-name">Intermed Casa</div>
+    </a>
+    <a href="https://www.grntopinvest.ro/" class="agency" target="_blank">
+      <img src="https://www.grntopinvest.ro/public/img/logo.png" alt="GRN Top Invest">
+      <div class="agency-name">GRN Top Invest</div>
+    </a>
+    <a href="https://www.maac.ro/" class="agency" target="_blank">
+      <img src="https://www.maac.ro/logo-maac.png" alt="MAAC">
+      <div class="agency-name">MAAC Imobiliare</div>
+    </a>
   </div>
 </body>
 </html>
